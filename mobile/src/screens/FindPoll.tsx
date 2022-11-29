@@ -1,3 +1,4 @@
+import {useNavigation} from '@react-navigation/native';
 import {Heading, VStack} from 'native-base';
 
 import {Button} from '../components/Button';
@@ -5,9 +6,15 @@ import {Header} from '../components/Header';
 import {Input} from '../components/Input';
 
 export function FindPoll() {
+  const {navigate} = useNavigation();
+
   return (
     <VStack flex={1} bg="gray.900">
-      <Header title="Buscar por código" showBackButton />
+      <Header
+        title="Buscar por código"
+        showBackButton
+        onButtonPress={() => navigate('polls')}
+      />
 
       <VStack mt={8} mx={5} alignItems="center">
         <Heading
