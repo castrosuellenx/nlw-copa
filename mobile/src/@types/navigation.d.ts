@@ -4,6 +4,9 @@ export declare global {
       newPoll: undefined;
       polls: undefined;
       findPoll: undefined;
+      pollDetails: {
+        id: string;
+      };
     }
   }
 }

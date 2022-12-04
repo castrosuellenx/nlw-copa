@@ -68,7 +68,7 @@ export function FindPoll() {
       <Header
         title="Buscar por código"
         showBackButton
-        onButtonPress={() => navigate('polls')}
+        onBack={() => navigate('polls')}
       />
 
       <VStack mt={8} mx={5} alignItems="center">

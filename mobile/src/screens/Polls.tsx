@@ -70,7 +70,12 @@ export function Polls() {
         <FlatList
           data={polls}
           keyExtractor={(item) => item.id}
-          renderItem={({item}) => <PollCard data={item} />}
+          renderItem={({item}) => (
+            <PollCard
+              data={item}
+              onPress={() => navigate('pollDetails', {id: item.id})}
+            />
+          )}
           px={5}
           showsVerticalScrollIndicator={false}
           _contentContainerStyle={{pb: 100}}
